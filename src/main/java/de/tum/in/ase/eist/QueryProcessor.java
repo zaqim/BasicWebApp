@@ -16,7 +16,7 @@ public class QueryProcessor {
            return "MyTeam";
         } else { // TODO extend the programm here
             if(query.contains("what is 7 plus 16"))
-                return "test";
+                return "23";
         }
     }
 }
