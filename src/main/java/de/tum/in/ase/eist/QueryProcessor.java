@@ -15,6 +15,7 @@ public class QueryProcessor {
            return "MyTeam";
         } else { // TODO extend the programm here
             if(query.contains("what is") && query.contains("plus")){
+                query.replace("%20"," ");
                 int firstNum=0;
                 int secondNum = 0;
                 String tokens[] = query.split(" ");
