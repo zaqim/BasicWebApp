@@ -15,8 +15,13 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
            return "MyTeam";
         } else { // TODO extend the programm here
-            if(query.contains("what is 7 plus 16"))
-                return "23";
+            if(query.contains("what is") && query.contains("plus")){
+                String first = query.indexof("is") + 3;
+                int firstNum = String.ParseInt(first);
+                String second = query.indexof("plus") + 5;
+                int secondNum = String.ParseInt(second);
+                return firstNum+secondNum;
+            }
         }
     }
 }
