@@ -16,10 +16,16 @@ public class QueryProcessor {
            return "MyTeam";
         } else { // TODO extend the programm here
             if(query.contains("what is") && query.contains("plus")){
-                String first = query.indexOf("is") + 3;
-                int firstNum = String.ParseInt(first);
-                String second = query.indexOf("plus") + 5;
-                int secondNum = String.ParseInt(second);
+                String tokens[] = query.split();
+                int firstNum,secondNum;
+                for(int i = 0;i<query.length(); i++) {
+                    if(tokens[i].equals("is")){
+                        firstNum = Integer.parseInt(tokens[i+1]);
+                    }
+                    if(tokens[i].equals("plus")) {
+                        secondNum = Integer.parseInt(tokens[i+1]);
+                    }
+                }
                 return firstNum+secondNum;
             }
         }
