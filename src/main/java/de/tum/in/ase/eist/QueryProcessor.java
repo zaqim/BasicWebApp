@@ -28,7 +28,7 @@ public class QueryProcessor {
                 }
                 return String.valueOf(firstNum+secondNum);
             }
-            return "null";
+            return "";
         }
     }
 }
