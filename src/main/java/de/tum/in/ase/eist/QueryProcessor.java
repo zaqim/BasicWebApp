@@ -7,6 +7,7 @@ public class QueryProcessor {
 
     public String process(String query) {
 		query = query.toLowerCase();
+        query.replace("%20","");
         if (query.contains("shakespeare")) {
             return "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
                     "English poet, playwright, and actor, widely regarded as the greatest " +
@@ -14,7 +15,7 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
            return "MyTeam";
         } else { // TODO extend the programm here
-            if(query.contains("what is your name"))
+            if(query.contains("what is 7 plus 16"))
                 return "test";
         }
     }
