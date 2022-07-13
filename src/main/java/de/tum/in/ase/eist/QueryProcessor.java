@@ -18,7 +18,7 @@ public class QueryProcessor {
             int firstNum,secondNum;
 
             if(query.contains("what is") && query.contains("plus")){
-                String tokens[] = query.split();
+                String tokens[] = query.split(" ");
                 for(int i = 0;i<query.length(); i++) {
                     if(tokens[i].equals("is")){
                         firstNum = Integer.parseInt(tokens[i+1]);
