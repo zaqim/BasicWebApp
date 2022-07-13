@@ -15,9 +15,10 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
            return "MyTeam";
         } else { // TODO extend the programm here
+            int firstNum,secondNum;
+
             if(query.contains("what is") && query.contains("plus")){
                 String tokens[] = query.split();
-                int firstNum,secondNum;
                 for(int i = 0;i<query.length(); i++) {
                     if(tokens[i].equals("is")){
                         firstNum = Integer.parseInt(tokens[i+1]);
